@@ -19,38 +19,21 @@ $ npm install aulianov/youtube-video-clip-meta
 `http//www.youtube.com/watch?v={videoId}`
 
 ``` javascript
-var fetchVideoInfo = require('youtube-info');
-fetchVideoInfo(videoId, cb);
-```
-or for different languages:
-``` javascript
-fetchVideoInfo(videoId, {language: 'fr'}, cb);
+const getVideoClipMeta = require('youtube-video-clip-meta')
+getVideoClipMeta(videoId, {language: 'fr'})
+.then(videoInfo => {
+  console.log(videoInfo)
+})
+.catch(error => {
+  console.log(error)
+})
+
 ```
 
 | Parameter     | Meaning       |
 |:--------------|:---------------|
 | videoId       | ID of youtube Video |
 | params        | (optional) language option
-| callback      | (optional) callback function |
-
-### Promises API
-
-``` javascript
-var fetchVideoInfo = require('youtube-info');
-fetchVideoInfo('{videoId}').then(function (videoInfo) {
-  console.log(videoInfo);
-});
-```
-
-### Callback API
-
-``` javascript
-var fetchVideoInfo = require('youtube-info');
-fetchVideoInfo('{videoId}', function (err, videoInfo) {
-  if (err) throw new Error(err);
-  console.log(videoInfo);
-});
-```
 
 ## Result
 
@@ -58,14 +41,13 @@ fetchVideoInfo('{videoId}', function (err, videoInfo) {
 {
   videoId: '{video Id}',
   url: '{video url}',
-  language: '{language from input option}',
+  language: '{language}',
   title: '{video title}',
   description: '{video description as HTML}',
   owner: '{video owner}',
   channelId: '{owner channel id}',
   thumbnailUrl: '{video thumbnail url}',
-  embedURL: '{video embed url}',
-  datePublished: '{video publication date}',
+  datePublished: '{video publication date as YYYY-mm-dd}',
   genre: '{video genre}',
   paid: {true/false},
   unlisted: {true/false},
@@ -73,11 +55,11 @@ fetchVideoInfo('{videoId}', function (err, videoInfo) {
   duration: {video duration in seconds},
   views: {number of views},
   regionsAllowed: [ '{two letter country code}', ... ],
-  commentCount: {number of comments},
   likeCount: {number of likes},
   dislikeCount: {number of dislikes},
   channelThumbnailUrl: {channel thumbnail url},
   "tags": [{array of tags}],
+  commentCount: {number of comments},
 }
 
 ```

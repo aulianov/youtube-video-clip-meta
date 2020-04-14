@@ -1,6 +1,6 @@
 {
   "name": "youtube-video-clip-meta",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fetch meta information about YouTube videos",
   "main": "index.js",
   "scripts": {
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.2",
-    "prettier-standard": "^16.1.0"
+    "mocha": "^6.2.3",
+    "prettier-standard": "^16.2.1"
   }
 }

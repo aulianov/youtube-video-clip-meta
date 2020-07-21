@@ -66,7 +66,6 @@ describe('youtube-video-clip-meta', function () {
       expect(videoInfo).to.have.a.property('channelThumbnailUrl').which.is.a('string')
       expect(videoInfo).to.have.a.property('tags').which.is.a('array')
       expect(videoInfo.tags).to.have.length.above(0)
-      expect(videoInfo).to.have.a.property('commentCount').which.is.a('number').above(0)
     })
   })
   

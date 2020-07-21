@@ -59,7 +59,13 @@ getVideoClipMeta(videoId, {language: 'fr'})
   dislikeCount: {number of dislikes},
   channelThumbnailUrl: {channel thumbnail url},
   "tags": [{array of tags}],
-  commentCount: {number of comments},
 }
 
+```
+
+## Deprecated
+```
+{
+  commentCount: {number of comments},
+}
 ```

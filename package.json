@@ -1,6 +1,6 @@
 {
   "name": "youtube-video-clip-meta",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Fetch meta information about YouTube videos",
   "main": "index.js",
   "scripts": {
@@ -23,13 +23,13 @@
   "author": "Andrew Ulianov <andrew.ulianov@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.3",
+    "cheerio": "^1.0.0-rc.10",
     "request": "2.88.0",
     "request-promise-native": "^1.0.9"
   },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.3",
-    "prettier-standard": "^16.4.1"
+    "mocha": "^9.1.3",
+    "prettier-standard": "^13.0.6"
   }
 }
